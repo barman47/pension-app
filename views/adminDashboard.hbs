@@ -1,0 +1,348 @@
+{{> header}}
+<main>
+    <div class="container">
+        <br><br>
+        <h4 class="center">Admin Dashboard</h4>
+        <br><br>
+        <div>
+            <ul class="collapsible">
+                <li>
+                    <div class="collapsible-header"><i class="mdi mdi-information-outline collapsible-icons"></i><h6>PERSONAL INFORMATION</h6></div>
+                    <div class="collapsible-body">
+                        <div>
+                            <form action="">
+                                <div class="row">
+                                    <div class="col s12 l6 input-field">
+                                        <input type="text" name="firstName" id="firstName" class="validate" autofocus>
+                                        <label for="firstName">First Name</label>
+                                        <span class="helper-text" data-error="Invalid First Name"></span>
+                                    </div>
+                                    <div class="col s12 l6 input-field">
+                                        <input type="text" name="lastName" id="lastName" class="validate">
+                                        <label for="lastName">Last Name</label>
+                                        <span class="helper-text" data-error="Invalid Last Name"></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col s12 l6 input-field">
+                                        <textarea name="contactAddress" id="contactAddress" class="materialize-textarea validate"></textarea>
+                                        <label for="contactAddress">Contact Address</label>
+                                        <span class="helper-text" data-error="Invalid Contact Address" data-success="Okay"></span>
+                                    </div>
+                                    <div class="col s12 l6 input-field">
+                                        <textarea name="permanentAddress" id="permanentAddress" class="materialize-textarea validate"></textarea>
+                                        <label for="permanentAddress">Permanent Address Address</label>
+                                        <span class="helper-text" data-error="Invalid Permanent Address" data-success="Okay"></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col s12 l6 input-field">
+                                        <select id="gender" name="gender">
+                                            <option value="" selected disabled>Select One</option>
+                                            <option>Male</option>
+                                            <option>Male</option>
+                                        </select>
+                                        <label for="gender">Select Your Gender</label>
+                                    </div>
+                                    <div class="col s12 l6 input-field">
+                                        <input id="dateOfBirth" name="dateOfBirth" type="text" class="datepicker">
+                                        <label for="dateOfBirth">Date of Birth</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col s12 l6 input-field">
+                                        <select id="maritalStatus" name="maritalStatus">
+                                            <option value="" selected disabled>Select One</option>
+                                            <option>Single</option>
+                                            <option>Married</option>
+                                            <option>Divorced</option>
+                                        </select>
+                                        <label for="maritalStatus">Are you Married?</label>
+                                    </div>
+                                    <div class="col s12 l6 input-field">
+                                         <select id="religion" name="religion">
+                                            <option value="" selected disabled>Choose your Religion</option>
+                                            <option>Christianity</option>
+                                            <option>Islam</option>
+                                        </select>
+                                        <label for="religion">What is your Religion?</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col s12 l6 input-field">
+                                        <input type="text" id="phoneNumber" name="phoneNumber" class="validate">
+                                        <label for="phoneNumber">Phone Number</label>
+                                        <span class="helper-text" data-error="Invalid Phone Number" data-success="Okay"></span>
+                                    </div>
+                                    <div class="col s12 l6 input-field">
+                                         <input type="text" name="nic" id="nic" class="validate">
+                                        <label for="nic">NIC Number</label>
+                                        <span class="helper-text" data-error="Invalid NIC Number" data-success="Okay"></span>
+                                    </div>
+                                </div>
+                                <br><hr><br>
+                                <div class="row">
+                                    <div class="col s12 l6 input-field">
+                                        <input type="text" id="fatherName" name="fatherName" class="validate">
+                                        <label for="fatherName">Father's Name</label>
+                                        <span class="helper-text" data-error="Invalid Name" data-success="Okay"></span>
+                                    </div>
+                                    <div class="col s12 l6 input-field">
+                                         <input type="text" name="motherName" id="motherName" class="validate">
+                                        <label for="motherName">Mother's Name</label>
+                                        <span class="helper-text" data-error="Invalid Name" data-success="Okay"></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col s12 l6 input-field">
+                                        <input type="text" id="spouseName" name="spouseName" class="validate">
+                                        <label for="spouseName">Spouse Name</label>
+                                        <span class="helper-text" data-error="Invalid Name" data-success="Okay"></span>
+                                    </div>
+                                    <div class="col s12 l6 input-field">
+                                        <input type="number" name="childrenNumber" id="childrenNumber" class="validate">
+                                        <label for="childrenNumber">How many Children?</label>
+                                        <span class="helper-text" data-error="Invalid Number" data-success="Okay"></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col s12 l6 input-field">
+                                        <select id="stateOforigin" name="stateOfOrigin">
+                                            <option value="" selected disabled>Choose Your State</option>
+                                            <option>Abia</option>
+                                            <option>Abuja</option>
+                                        </select>
+                                        <label for="stateOfOrigin">State of Origin</label>
+                                    </div>
+                                    <div class="col s12 l6 input-field">
+                                        <input type="text" name="lga" id="lga" class="validate">
+                                        <label for="lga">L.G.A. of Origin</label>
+                                        <span class="helper-text" data-error="Invalid LGA" data-success="Okay"></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col s12 l6 input-field">
+                                        <input id="dateOfJoin" name="dateOfJoin" type="text" class="datepicker">
+                                        <label for="dateOfJoin">Date of Joining</label>
+                                    </div>
+                                    <div class="col s12 l6 input-field">
+                                        <input id="dateOfConf" name="dateOfConf" type="text" class="datepicker">
+                                        <label for="dateOfConf">Date of Confirmation</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col s12">
+                                        <button id="personalInfoBtn" class="btn waves-effect waves-white">Save Information</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header"><i class="mdi mdi-information-outline collapsible-icons"></i><h6>NEXT OF KIN DETAILS</h6></div>
+                    <div class="collapsible-body">
+                        <div>
+                            <form action="">
+                                <div class="row">
+                                    <div class="col s12 l6 input-field">
+                                        <input type="text" name="nextOfKFirstName" id="nextOfKFirstName" class="validate" autofocus>
+                                        <label for="nextOfKFirstName">First Name</label>
+                                        <span class="helper-text" data-error="Invalid First Name"></span>
+                                    </div>
+                                    <div class="col s12 l6 input-field">
+                                        <input type="text" name="nextOfKLastName" id="nextOfKLastName" class="validate">
+                                        <label for="nextOfKLastName">Last Name</label>
+                                        <span class="helper-text" data-error="Invalid Last Name"></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col s12 l6 input-field">
+                                        <textarea name="nextOfKContactAddress" id="nextOfKContactAddress" class="materialize-textarea validate"></textarea>
+                                        <label for="nextOfKContactAddress">Contact Address</label>
+                                        <span class="helper-text" data-error="Invalid Contact Address" data-success="Okay"></span>
+                                    </div>
+                                    <div class="col s12 l6 input-field">
+                                        <textarea name="nextOfKPermanentAddress" id="nextOfKPermanentAddress" class="materialize-textarea validate"></textarea>
+                                        <label for="nextOfKPermanentAddress">Permanent Address Address</label>
+                                        <span class="helper-text" data-error="Invalid Permanent Address" data-success="Okay"></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col s12 l6 input-field">
+                                        <select id="nextOfKGender" name="nextOfKGender">
+                                            <option value="" selected disabled>Select One</option>
+                                            <option>Male</option>
+                                            <option>Male</option>
+                                        </select>
+                                        <label for="nextOfKGender">Select Your Gender</label>
+                                    </div>
+                                    <div class="col s12 l6 input-field">
+                                        <input id="nextOfKDateOfBirth" name="nextOfKDateOfBirth" type="text" class="datepicker">
+                                        <label for="nextOfKDateOfBirth">Date of Birth</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col s12 l6 input-field">
+                                        <select id="nextOfKMaritalStatus" name="nextOfKMaritalStatus">
+                                            <option value="" selected disabled>Select One</option>
+                                            <option>Single</option>
+                                            <option>Married</option>
+                                            <option>Divorced</option>
+                                        </select>
+                                        <label for="nextOfKMaritalStatus">Are you Married?</label>
+                                    </div>
+                                    <div class="col s12 l6 input-field">
+                                         <select id="nextofKReligion" name="nextofKReligion">
+                                            <option value="" selected disabled>Choose your Religion</option>
+                                            <option>Christianity</option>
+                                            <option>Islam</option>
+                                        </select>
+                                        <label for="nextofKReligion">What is your Religion?</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col s12 l6 input-field">
+                                        <input type="text" id="nextOfKPhone" name="nextOfKPhone" class="validate">
+                                        <label for="nextOfKPhone">Phone Number</label>
+                                        <span class="helper-text" data-error="Invalid Phone Number" data-success="Okay"></span>
+                                    </div>
+                                    <div class="col s12 l6 input-field">
+                                         <input type="text" name="nextOfKNIC" id="nextOfKNIC" class="validate">
+                                        <label for="nextOfKNIC">NIC Number</label>
+                                        <span class="helper-text" data-error="Invalid NIC Number" data-success="Okay"></span>
+                                    </div>
+                                </div>
+                                <br><hr><br>
+                                <div class="row">
+                                    <div class="col s12 l6 input-field">
+                                        <input type="text" id="nextOfKFatherName" name="nextOfKFatherName" class="validate">
+                                        <label for="nextOfKFatherName">Father's Name</label>
+                                        <span class="helper-text" data-error="Invalid Name" data-success="Okay"></span>
+                                    </div>
+                                    <div class="col s12 l6 input-field">
+                                         <input type="text" name="nextOfKMotherName" id="nextOfKMotherName" class="validate">
+                                        <label for="nextOfKMotherName">Mother's Name</label>
+                                        <span class="helper-text" data-error="Invalid Name" data-success="Okay"></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col s12 l6 input-field">
+                                        <input type="text" id="nextOfKSpouse" name="nextOfKSpouse" class="validate">
+                                        <label for="nextOfKSpouse">Spouse Name</label>
+                                        <span class="helper-text" data-error="Invalid Name" data-success="Okay"></span>
+                                    </div>
+                                    <div class="col s12 l6 input-field">
+                                        <input type="number" name="nextOfKChildrenNumber" id="nextOfKChildrenNumber" class="validate">
+                                        <label for="nextOfKChildrenNumber">How many Children?</label>
+                                        <span class="helper-text" data-error="Invalid Number" data-success="Okay"></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col s12 l6 input-field">
+                                        <select id="nextOfKState" name="nextOfKState">
+                                            <option value="" selected disabled>Choose Your State</option>
+                                            <option>Abia</option>
+                                            <option>Abuja</option>
+                                        </select>
+                                        <label for="nextOfKState">State of Origin</label>
+                                    </div>
+                                    <div class="col s12 l6 input-field">
+                                        <input type="text" name="nextOfKLGA" id="nextOfKLGA" class="validate">
+                                        <label for="nextOfKLGA">L.G.A. of Origin</label>
+                                        <span class="helper-text" data-error="Invalid LGA" data-success="Okay"></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col s12">
+                                        <button id="nextOfKinInfoBtn" class="btn waves-effect waves-white">Save Information</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header"><i class="mdi mdi-information-outline collapsible-icons"></i><h6>QUALIFICATION</h6></div>
+                    <div class="collapsible-body">
+                        <div>
+                            <form action="">
+                                <div class="row">
+                                    <h6 class="center">Educational Qualification</h6>
+                                    <div class="col s12 l6 input-field">
+                                        <textarea name="oLevel" id="oLevel" class="materialize-textarea validate"></textarea>
+                                        <label for="oLevel">O - Level</label>
+                                        <span class="helper-text" data-error="Invalid Informantion" data-success="Okay"></span>
+                                    </div>
+                                    <div class="col s12 l6 input-field">
+                                        <textarea name="aLevel" id="aLevel" class="materialize-textarea validate"></textarea>
+                                        <label for="aLevel">A - Level</label>
+                                        <span class="helper-text" data-error="Invalid Information" data-success="Okay"></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <h6 class="center">Skills</h6>
+                                    <div class="col s12 l6 input-field">
+                                        <textarea name="sports" id="sports" class="materialize-textarea validate"></textarea>
+                                        <label for="sports">Sporting Activities</label>
+                                        <span class="helper-text" data-error="Invalid Informantion" data-success="Okay"></span>
+                                    </div>
+                                    <div class="col s12 l6 input-field">
+                                        <textarea name="otherSkills" id="otherSkills" class="materialize-textarea validate"></textarea>
+                                        <label for="otherSkills">Other Skills</label>
+                                        <span class="helper-text" data-error="Invalid Informantion" data-success="Okay"></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <h6 class="center">Salary Details</h6>
+                                    <div class="col s12 l6 input-field">
+                                        <input type="text" id="salary" name="salary" class="validate">
+                                        <label for="salary">Basic Salary</label>
+                                        <span class="helper-text" data-error="Invalid Salary" data-success="Okay"></span>
+                                    </div>
+                                    <div class="col s12 l6 input-field">
+                                        <input type="text" id="bank" name="bank" class="validate">
+                                        <label for="bank">Bank Name</label>
+                                        <span class="helper-text" data-error="Invalid Salary" data-success="Okay"></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col s12 l6 input-field">
+                                        <input type="text" id="accountNumber" name="accountNumber" class="validate">
+                                        <label for="accountNumber">Account</label>
+                                        <span class="helper-text" data-error="Invalid Account Number" data-success="Okay"></span>
+                                    </div>
+                                    <div class="col s12 l6 input-field">
+                                        <input type="text" id="deduction" name="deduction" class="validate">
+                                        <label for="deduction">Monthly Salary Deduction</label>
+                                        <span class="helper-text" data-error="Invalid Information" data-success="Okay"></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col s12 l6 input-field">
+                                        <input type="text" id="sortCode" name="sortCode" class="validate">
+                                        <label for="sortCode">Bank Sort Code</label>
+                                        <span class="helper-text" data-error="Invalid Account Number" data-success="Okay"></span>
+                                    </div>
+                                    <div class="col s12 l6 input-field">
+                                        <input type="text" id="duration" name="duration" class="validate">
+                                        <label for="duration">Duration (Years)</label>
+                                        <span class="helper-text" data-error="Invalid Information" data-success="Okay"></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col s12">
+                                        <button id="personalInfoBtn" class="btn waves-effect waves-white">Save Information</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</main>
+<br>
+{{> footer}}
