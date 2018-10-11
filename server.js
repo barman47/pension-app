@@ -17,19 +17,19 @@ const port = process.env.PORT || 5500;
 const users = require('./routes/users');
 const admins = require('./routes/admins');
 
-// mongoose.connect(config.database, {
-//     useNewUrlParser: true
-// });
+mongoose.connect(config.database, {
+    useNewUrlParser: true
+});
 
-// let conn = mongoose.connection;
+let conn = mongoose.connection;
 
-// conn.once('open', () => {
-//     console.log('Database Connection Established Successfully.');
-// });
+conn.once('open', () => {
+    console.log('Database Connection Established Successfully.');
+});
 
-// conn.on('error', (err) => {
-//     console.log('Unable to Connect to Database. ' + err);
-// });
+conn.on('error', (err) => {
+    console.log('Unable to Connect to Database. ' + err);
+});
 
 var app = express();
 

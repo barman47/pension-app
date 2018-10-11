@@ -6,11 +6,11 @@
         <br><br>
         <div>
             <ul class="collapsible">
-                <li>
+                <li id="personalInfo">
                     <div class="collapsible-header"><i class="mdi mdi-information-outline collapsible-icons"></i><h6>PERSONAL INFORMATION</h6></div>
                     <div class="collapsible-body">
                         <div>
-                            <form action="">
+                            <form name="personalInfo">
                                 <div class="row">
                                     <div class="col s12 l6 input-field">
                                         <input type="text" name="firstName" id="firstName" class="validate" autofocus>
@@ -75,9 +75,9 @@
                                         <span class="helper-text" data-error="Invalid Phone Number" data-success="Okay"></span>
                                     </div>
                                     <div class="col s12 l6 input-field">
-                                         <input type="text" name="nic" id="nic" class="validate">
+                                         <input type="text" name="nic" id="nic" class="validate" autocomplete="off">
                                         <label for="nic">NIC Number</label>
-                                        <span class="helper-text" data-error="Invalid NIC Number" data-success="Okay"></span>
+                                        <span class="helper-text" data-error="Invalid NIC Number" data-success="Okay">e.g. XXXX-XXXX-XXXX-XXXX</span>
                                     </div>
                                 </div>
                                 <br><hr><br>
@@ -110,7 +110,42 @@
                                         <select id="stateOforigin" name="stateOfOrigin">
                                             <option value="" selected disabled>Choose Your State</option>
                                             <option>Abia</option>
-                                            <option>Abuja</option>
+                                            <option>Adamawa</option>
+                                            <option>Akwa Ibom</option>
+                                            <option>Anambra</option>
+                                            <option>Bauchi</option>
+                                            <option>Bayelsa</option>
+                                            <option>Benue</option>
+                                            <option>Borno</option>
+                                            <option>Cross River</option>
+                                            <option>Delta</option>
+                                            <option>Ebonyi</option>
+                                            <option>Edo</option>
+                                            <option>Ekiti</option>
+                                            <option>Enugu</option>
+                                            <option>Gombe</option>
+                                            <option>Imo</option>
+                                            <option>Jigawa</option>
+                                            <option>Kaduna</option>
+                                            <option>Kano</option>
+                                            <option>Katsina</option>
+                                            <option>Kebbi</option>
+                                            <option>Kogi</option>
+                                            <option>Kwara</option>
+                                            <option>Lagos</option>
+                                            <option>Nasarawa</option>
+                                            <option>Niger</option>
+                                            <option>Ogun</option>
+                                            <option>Ondo</option>
+                                            <option>Osun</option>
+                                            <option>Oyo</option>
+                                            <option>Plateau</option>
+                                            <option>Rivers</option>
+                                            <option>Sokoto</option>
+                                            <option>Taraba</option>
+                                            <option>Yobe</option>
+                                            <option>Zamfara</option>
+                                            <option>FCT</option>
                                         </select>
                                         <label for="stateOfOrigin">State of Origin</label>
                                     </div>
@@ -129,6 +164,15 @@
                                         <input id="dateOfConf" name="dateOfConf" type="text" class="datepicker">
                                         <label for="dateOfConf">Date of Confirmation</label>
                                     </div>
+                                    <div class="col s12 l6 input-field">
+                                        <input id="idNumber" name="idNumber" type="text" value="{{idNumber}}">
+                                        <label for="idNumber">Identification Number</label>
+                                        <span class="helper-text" data-error="Invalid ID Number" data-success="Okay">Do not modify</span>
+                                    </div>
+                                    <div class="col s12 l6 input-field">
+                                        <input id="password" name="password" type="password">
+                                        <label for="password">PIN</label>
+                                    </div>
                                 </div>
                                 <div class="row">
                                     <div class="col s12">
@@ -139,11 +183,11 @@
                         </div>
                     </div>
                 </li>
-                <li>
+                <li id="nextOfKinInfo">
                     <div class="collapsible-header"><i class="mdi mdi-information-outline collapsible-icons"></i><h6>NEXT OF KIN DETAILS</h6></div>
                     <div class="collapsible-body">
                         <div>
-                            <form action="">
+                            <form name="nextOfKinInfo">
                                 <div class="row">
                                     <div class="col s12 l6 input-field">
                                         <input type="text" name="nextOfKFirstName" id="nextOfKFirstName" class="validate" autofocus>
@@ -173,7 +217,7 @@
                                         <select id="nextOfKGender" name="nextOfKGender">
                                             <option value="" selected disabled>Select One</option>
                                             <option>Male</option>
-                                            <option>Male</option>
+                                            <option>Female</option>
                                         </select>
                                         <label for="nextOfKGender">Select Your Gender</label>
                                     </div>
@@ -210,7 +254,7 @@
                                     <div class="col s12 l6 input-field">
                                          <input type="text" name="nextOfKNIC" id="nextOfKNIC" class="validate">
                                         <label for="nextOfKNIC">NIC Number</label>
-                                        <span class="helper-text" data-error="Invalid NIC Number" data-success="Okay"></span>
+                                        <span class="helper-text" data-error="Invalid NIC Number" data-success="Okay">e.g. XXXX-XXXX-XXXX-XXXX</span>
                                     </div>
                                 </div>
                                 <br><hr><br>
@@ -243,7 +287,42 @@
                                         <select id="nextOfKState" name="nextOfKState">
                                             <option value="" selected disabled>Choose Your State</option>
                                             <option>Abia</option>
-                                            <option>Abuja</option>
+                                            <option>Adamawa</option>
+                                            <option>Akwa Ibom</option>
+                                            <option>Anambra</option>
+                                            <option>Bauchi</option>
+                                            <option>Bayelsa</option>
+                                            <option>Benue</option>
+                                            <option>Borno</option>
+                                            <option>Cross River</option>
+                                            <option>Delta</option>
+                                            <option>Ebonyi</option>
+                                            <option>Edo</option>
+                                            <option>Ekiti</option>
+                                            <option>Enugu</option>
+                                            <option>Gombe</option>
+                                            <option>Imo</option>
+                                            <option>Jigawa</option>
+                                            <option>Kaduna</option>
+                                            <option>Kano</option>
+                                            <option>Katsina</option>
+                                            <option>Kebbi</option>
+                                            <option>Kogi</option>
+                                            <option>Kwara</option>
+                                            <option>Lagos</option>
+                                            <option>Nasarawa</option>
+                                            <option>Niger</option>
+                                            <option>Ogun</option>
+                                            <option>Ondo</option>
+                                            <option>Osun</option>
+                                            <option>Oyo</option>
+                                            <option>Plateau</option>
+                                            <option>Rivers</option>
+                                            <option>Sokoto</option>
+                                            <option>Taraba</option>
+                                            <option>Yobe</option>
+                                            <option>Zamfara</option>
+                                            <option>FCT</option>
                                         </select>
                                         <label for="nextOfKState">State of Origin</label>
                                     </div>
@@ -262,11 +341,11 @@
                         </div>
                     </div>
                 </li>
-                <li>
+                <li id="qualificationInfo">
                     <div class="collapsible-header"><i class="mdi mdi-information-outline collapsible-icons"></i><h6>QUALIFICATION</h6></div>
                     <div class="collapsible-body">
                         <div>
-                            <form action="">
+                            <form name="qualification" action="">
                                 <div class="row">
                                     <h6 class="center">Educational Qualification</h6>
                                     <div class="col s12 l6 input-field">
@@ -309,7 +388,7 @@
                                 <div class="row">
                                     <div class="col s12 l6 input-field">
                                         <input type="text" id="accountNumber" name="accountNumber" class="validate">
-                                        <label for="accountNumber">Account</label>
+                                        <label for="accountNumber">Account Number</label>
                                         <span class="helper-text" data-error="Invalid Account Number" data-success="Okay"></span>
                                     </div>
                                     <div class="col s12 l6 input-field">
@@ -322,17 +401,17 @@
                                     <div class="col s12 l6 input-field">
                                         <input type="text" id="sortCode" name="sortCode" class="validate">
                                         <label for="sortCode">Bank Sort Code</label>
-                                        <span class="helper-text" data-error="Invalid Account Number" data-success="Okay"></span>
+                                        <span class="helper-text" data-error="Invalid Sort Code" data-success="Okay">e.g. XX-XX-XX</span>
                                     </div>
                                     <div class="col s12 l6 input-field">
-                                        <input type="text" id="duration" name="duration" class="validate">
+                                        <input type="number" id="duration" name="duration" class="validate">
                                         <label for="duration">Duration (Years)</label>
                                         <span class="helper-text" data-error="Invalid Information" data-success="Okay"></span>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col s12">
-                                        <button id="personalInfoBtn" class="btn waves-effect waves-white">Save Information</button>
+                                        <button id="qualificationButton" class="btn waves-effect waves-white">Save Information</button>
                                     </div>
                                 </div>
                             </form>
@@ -341,7 +420,19 @@
                 </li>
             </ul>
         </div>
-
+    </div>
+    <div class="preloader-wrapper big active">
+        <div class="spinner-layer spinner-blue-only">
+            <div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+            <div class="gap-patch">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-clipper-right">
+                <div class="circle"></div>
+            </div>
+        </div> 
     </div>
 </main>
 <br>
