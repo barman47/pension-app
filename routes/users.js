@@ -1,4 +1,50 @@
 const express = require('express');
 const router = express.Router();
+const passport = require('passport');
+const mongoose = require('mongoose');
+const User = require('../models/user');
+
+router.post('/login', (req, res, next) => {
+    passport.authenticate('user', (err, user, info) => {
+        if (err) {
+            return next(err);
+        }
+        if (!user) {
+            req.flash('failure', 'Incorrect username or Password.');
+            return res.render('gratuity', {
+                title: 'Customer Pension',
+                style: 'gratuity.css',
+                script: 'gratuity.js',
+                loginUsername: req.body.loginUsername,
+                loginPassword: req.body.loginPassword
+            });
+        }
+
+        req.logIn(user, (err) => {
+            if (err) {
+                return console.log(err);
+            } else {
+                let id = user._id;
+                id = mongoose.Types.ObjectId(id);
+                res.redirect('/users/gratuity/' + id);
+            }
+        });
+    })(req, res, next);
+});
+
+router.get('/gratuity/:id', (req, res) => {
+    User.findById(req.params.id, (err, user) => {
+        if (err) {
+            return console.log(err);
+        } else {
+            res.render('gratuity', {
+                title: 'Customer Pension',
+                style: 'gratuity.css',
+                script: 'gratuity.js',
+                user
+            });
+        }
+    });
+});
 
 module.exports = router;

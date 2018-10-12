@@ -106,6 +106,8 @@ router.put('/nextOfKinInfo', (req, res) => {
         nextOfKState: body.nextOfKState,
         nextOfKLGA: body.nextOfKLGA
     };
+    const firstName = body.firstName;
+    const lastName = body.lastName;
     User.findOneAndUpdate({firstName, lastName}, {
         $set: userNextOfKinInfo
     }, {new: true}, (err, updatedUser) => {

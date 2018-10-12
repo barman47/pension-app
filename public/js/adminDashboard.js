@@ -127,8 +127,6 @@ $(document).ready(function () {
                     success: (function () {
                         M.toast({html: 'Data saved successfully'});
                         spinner.style.display = 'none';
-                        personalInfoCollapsible.classList.remove('active');
-                        nextOfKinInfoCollapsible.classList.add('active');
                     })
                 }).fail(function () {
                     M.toast({
@@ -188,8 +186,6 @@ $(document).ready(function () {
                 }).done(function () {
                     M.toast({html: 'Data saved successfully'});
                     spinner.style.display = 'none';
-                    nextOfKinInfoCollapsible.classList.remove('active');
-                    qualificationInfoCollapsible.classList.add('active');
                 }).fail(function (jqXHR, status) {
                     M.toast({
                         html: 'Error! Data not saved. Try again.'
@@ -241,16 +237,18 @@ $(document).ready(function () {
                 data
             }).done(function () {
                 M.toast({html: 'Data saved successfully'});
-                spinner.style.display = 'none';
-                window.location.href = '/';
+                const redirect = confirm('Data saved successfully. Do you wish to submit more data?');
+                if (redirect === true) {
+                    window.location.href = '/admins/dashboard';
+                } else {
+                    window.location.href = '/';
+                }
+                
             }).fail(function (jqXHR, status) {
                 M.toast({
                     html: 'Error! Data not saved. Try again.'
                 });
                 spinner.style.display = 'none';
-                personalInfoCollapsible.classList.remove('active');
-                nextOfKinInfoCollapsible.classList.remove('active');
-                qualificationInfoCollapsible.classList.remove('active');
             });
             spinner.style.display = 'none';
            }, 2500);

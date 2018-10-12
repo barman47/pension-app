@@ -49,7 +49,7 @@ nav {
     color: #2a6c4c;
 }
 
-#adminLoginButton, #customerLoginButton {
+#adminLoginButton, #customerLoginButton, #calculatePension {
     background-color: #2a6c4c !important;
     width: 100%
 }
@@ -71,7 +71,6 @@ nav {
     height: 200%;
 }
 
-#personalInfoBtn:hover, #nextOfKinInfoBtn:hover {
-    /* background-color: #1c573a; */
+#personalInfoBtn:hover, #nextOfKinInfoBtn:hover, #calculatePension {
     background-color: #2f8159;
 }
