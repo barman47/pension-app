@@ -46,12 +46,16 @@ router.get('/dashboard', (req, res) => {
         var number = Math.floor(Math.random() * 5);
         id = `${id}${number}`;
     }
-    res.render('adminDashboard', {
-        title: 'Admin Dashboard',
-        style: 'adminDashboard.css',
-        script: 'adminDashboard.js',
-        admin: true,
-        idNumber: id
+    User.find({}, (err, users) => {
+        if (err) return console.log(err);
+        res.render('adminDashboard', {
+            title: 'Admin Dashboard',
+            style: 'adminDashboard.css',
+            script: 'adminDashboard.js',
+            admin: true,
+            idNumber: id,
+            users
+        });
     });
 });
 
@@ -95,7 +99,7 @@ router.put('/nextOfKinInfo', (req, res) => {
         nextOfKPermanentAddress: body.nextOfKPermanentAddress,
         nextOfKGender: body.nextOfKGender,
         nextOfKDateOfBirth: body.nextOfKDateOfBirth,
-        nextOfKMaritalStatus: body.nextOfKMaritalStatustatus,
+        nextOfKMaritalStatus: body.nextOfKMaritalStatus,
         nextofKReligion: body.nextofKReligion,
         nextOfKPhone: body.nextOfKPhone,
         nextOfKNIC: body.nextOfKNIC,
@@ -128,6 +132,7 @@ router.put('/qualificationInfo', (req, res) => {
         salary: body.salary,
         bank: body.bank,
         accountNumber: body.accountNumber,
+        deduction: body.deduction,
         sortCode: body.sortCode,
         duration: body.duration,
         firstName: body.firstName,
@@ -145,6 +150,11 @@ router.put('/qualificationInfo', (req, res) => {
             res.end();
         }
     });
+});
+
+router.get('/logout', (req, res) => {
+    req.logOut();
+    res.redirect('/');
 });
 
 module.exports = router;

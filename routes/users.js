@@ -11,13 +11,14 @@ router.post('/login', (req, res, next) => {
         }
         if (!user) {
             req.flash('failure', 'Incorrect username or Password.');
-            return res.render('gratuity', {
-                title: 'Customer Pension',
-                style: 'gratuity.css',
-                script: 'gratuity.js',
-                loginUsername: req.body.loginUsername,
-                loginPassword: req.body.loginPassword
-            });
+            res.redirect('/');
+            // return res.render('index', {
+            //     title: 'NCP Pensions - Home',
+            //     style: 'index.css',
+            //     script: 'index.js',
+            //     loginUsername: req.body.loginUsername,
+            //     loginPassword: req.body.loginPassword
+            // });
         }
 
         req.logIn(user, (err) => {
@@ -45,6 +46,31 @@ router.get('/gratuity/:id', (req, res) => {
             });
         }
     });
+});
+
+router.put('/updatePension/:id', (req, res) => {
+    const body = req.body;
+    const userInfo = {
+        pension: body.pension,
+        gratuity: body.gratuity,
+        paid: 'Paid'
+    };
+
+    User.findOneAndUpdate({_id: req.params.id}, {
+        $set: userInfo
+    }, {new: true}, (err, updatedUser) => {
+        if (err) {
+            return console.log(err);
+        } else {
+            console.log(updatedUser);
+            res.end();
+        }
+    });
+});
+
+router.get('/logout', (req, res) => {
+    req.logOut();
+    res.redirect('/');
 });
 
 module.exports = router;

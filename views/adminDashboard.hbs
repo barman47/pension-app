@@ -436,4 +436,35 @@
     </div>
 </main>
 <br>
+<div id="pensioners-modal" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <h4 class="center">Pensioners Details</h4>
+            {{#if users}}
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Name</td>
+                            <td>Pension</td>
+                            <td>Gratuity</td>
+                            <td>Paid</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each users}}
+                            <tr>
+                                <td>{{this.firstName}} {{this.lastName}}</td>
+                                <td>{{this.pension}}</td>
+                                <td>{{this.gratuity}}</td>
+                                <td>{{this.paid}}</td>
+                            </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            {{/if}}
+        </div>
+        <div class="modal-footer">
+            <a href="#!" id="close" class="modal-close waves-effect waves-green btn-flat">CLOSE</a>
+            {{!-- <a href="#!" id="print" class="waves-effect waves-green btn-flat">PRINT</a> --}}
+        </div>
+  </div>
 {{> footer}}

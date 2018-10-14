@@ -8,6 +8,7 @@ $(document).ready(function () {
     $('.collapsible').collapsible();
     $('.datepicker').datepicker();
     $('select').formSelect();
+    $('.modal').modal();
     const personalInfoCollapsible = document.querySelector('#personalInfo');
     const nextOfKinInfoCollapsible = document.querySelector('#nextOfKinInfo');
     const qualificationInfoCollapsible = document.querySelector('#qualificationInfo');
@@ -471,6 +472,23 @@ $(document).ready(function () {
             }
         }, false);
     }
+
+    // $('#print').on('click', function () {
+    //     const main = document.querySelector('main');
+    //     const footer = document.querySelector('footer');
+    //     const nav = document.querySelector('nav');
+    //     this.style.display = 'none';
+    //     footer.style.display = 'none';
+    //     main.style.display = 'none';
+    //     nav.style.display = 'none';
+    //     document.getElementById('close').style.display = 'none';
+    //     window.print();
+    //     document.getElementById('close').style.display = 'block';
+    //     this.style.display = 'block';
+    //     footer.style.display = 'block';
+    //     main.style.display = 'block';
+    //     nav.style.display = 'block';
+    // });
 
     personalInfo.addEventListener('submit', submitPersonalInfo, false);
     nextOfKinInfo.addEventListener('submit', submitNextOfKinInfo, false);

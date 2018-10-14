@@ -45,7 +45,13 @@ const UserSchema = mongoose.Schema({
     accountNumber: String,
     deduction: Number,
     sortCode: String,
-    duration: Number
+    duration: Number,
+    gratuity: Number,
+    pension: Number,
+    paid: {
+        type: String,
+        default: 'Not paid'
+    }
 });
 
 let User = module.exports = mongoose.model('User', UserSchema); 
